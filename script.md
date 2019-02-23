@@ -1,0 +1,1 @@
+mvn archetype:generate - generate new maven project
