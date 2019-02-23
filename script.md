@@ -147,3 +147,14 @@ resources -> data.sql
 @JoinColumn(name = "owner_id") - если у нас нет поля owner в связанной сущности
 
 https://www.youtube.com/watch?v=V-ljsrVy6pE - Tuning Hibernate performance
+
+fetchType - вытягивать ли связанные сущности, когда из базы достается родительская
+cascade - что делать со связанной сущностью при изменении родительской
+
+-----
+
+https://habr.com/ru/company/piter/blog/343270/ - непрерывная интеграция
+
+Travis CI
+https://travis-ci.com/
+
