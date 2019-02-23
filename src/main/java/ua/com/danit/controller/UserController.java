@@ -17,12 +17,10 @@ public class UserController {
         this.userService = userService;
     }
 
-//    @GetMapping("current")
-//    public User getCurrentUser() {
-//        log.info("Method get current user");
-//
-//        return new User(1L, "Andrew", "Koziulia", "12345");
-//    }
+    @GetMapping("current")
+    public User getCurrentUser() {
+        return userService.getUserById(1L);
+    }
 
     @PostMapping("new")
     public User createNewUser(@RequestBody User user) {
