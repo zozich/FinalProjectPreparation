@@ -159,3 +159,21 @@ Travis CI
 https://travis-ci.com/
 
 Add .travis.yml to root
+
+-----
+
+dist: trusty
+
+language: java
+
+jdk:
+- oraclejdk8
+
+cache:
+  directories:
+  - $HOME/.m2
+
+script:
+  - mvn clean test
+  
+-----
