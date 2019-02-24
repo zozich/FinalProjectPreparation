@@ -158,3 +158,41 @@ https://habr.com/ru/company/piter/blog/343270/ - непрерывная инте
 Travis CI
 https://travis-ci.com/
 
+Add .travis.yml to root
+
+-----
+
+dist: trusty
+
+language: java
+
+jdk:
+- oraclejdk8
+
+cache:
+  directories:
+  - $HOME/.m2
+
+script:
+  - mvn clean test
+  
+-----
+
+Application deployment:
+1. npm run build
+2. Copy contents of `build` folder to resources -> static
+3. mvn clean package
+4. Send JAR from /target to remote server
+5. Run with java -jar jar-name.jar
+
+-----
+
+package.json -> proxy": "http://localhost:9000"
+
+
+Questions:
+ - Server side rendering
+ - Connecting MySQL
+ - React <-> Backend
+ - Search bar (React)
+ - Filter (React)
