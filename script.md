@@ -192,8 +192,9 @@ package.json -> proxy": "http://localhost:9000"
 
 Questions:
  - Server side rendering
- - Connecting MySQL
+ - Service worker
  - React <-> Backend
+ - Connecting MySQL
  - Search bar (React)
  - Filter (React)
  
@@ -214,3 +215,95 @@ https://medium.com/@baphemot/whats-server-side-rendering-and-do-i-need-it-cb42dc
 
 Вместе с Java:
 https://codeburst.io/jsx-react-js-java-server-side-rendering-ssr-2018-cf3aaff7969d
+
+-----------------
+25.02.2019
+
+Spring profiles:
+
+1) application-dev.yml - configuration for profile "dev"
+
+--- (divides profiles inside application.yml)
+
+
+spring:
+  profiles:
+    active: local
+    
+    
+
+---
+
+spring:
+  profiles: local
+
+  datasource:
+    url: jdbc:h2:mem:final-project-preparation
+    username: root
+    password:
+    driver-class-name: org.h2.Driver
+
+  h2:
+    console:
+      enabled: true
+      path: /console
+
+---
+
+spring:
+  profiles: dev
+
+  datasource:
+    url: jdbc:mysql://danit.cukm9c6zpjo8.us-west-2.rds.amazonaws.com:3306/fs5
+    username: fs5_user
+    password: bArceloNa
+
+---
+
+spring:
+  profiles: prod
+  
+  
+-------------------------
+
+Run -> Edit configurations -> VM Options -> 
+-Dspring.profiles.active=dev
+
+https://www.google.com/search?q=mysql+connector+java+maven&oq=mysql+connector+java+maven&aqs=chrome..69i57j0l5.5417j0j7&sourceid=chrome&ie=UTF-8
+<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.15</version>
+</dependency>
+
+
+
+  jpa:
+    hibernate:
+      ddl-auto:
+      
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/howto-database-initialization.html
+You can set spring.jpa.hibernate.ddl-auto explicitly and the standard Hibernate property values are none, validate, update, create, and create-drop. Spring Boot chooses a default value for you based on whether it thinks your database is embedded. It defaults to create-drop if no schema manager has been detected or none in all other cases. An embedded database is detected by looking at the Connection type. hsqldb, h2, and derby are embedded, and others are not. Be careful when switching from in-memory to a ‘real’ database that you do not make assumptions about the existence of the tables and data in the new platform. You either have to set ddl-auto explicitly or use one of the other mechanisms to initialize the database.
+
+
+**How to run data.sql with MySQL?**
+    data: classpath*:data.sql
+    
+
+React Router:
+npm i react-router-dom
+
+Redux:
+npm i redux react-redux
+
+<Provider store={store}>
+  <App/>
+</Provider>
+
+https://reactjs.org/docs/refs-and-the-dom.html
+
+
+Access store variables in action creators
+https://habr.com/ru/post/314582/
