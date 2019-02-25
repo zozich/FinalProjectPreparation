@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "photos")
+@Table(name = "zozich_photos")
 @NoArgsConstructor
 public class Photo extends BaseEntity {
     private String url;
