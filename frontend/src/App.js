@@ -90,4 +90,4 @@ const mapDispatchToProps = (dispatch) => {
 //     }
 // }
 
-export default connect(mapStoreToProps, mapDispatchToProps, mergeProps)(App);
+export default connect(mapStoreToProps, mapDispatchToProps)(App);
