@@ -196,3 +196,21 @@ Questions:
  - React <-> Backend
  - Search bar (React)
  - Filter (React)
+ 
+ 
+Service worker:
+https://developers.google.com/web/fundamentals/primers/service-workers/
+
+Просто о Progressive web application:
+https://tuhub.ru/posts/progressive-web-app-with-react
+
+Детальнее:
+https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-i-introduction-50679aef2b12
+https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-2-page-load-performance-33b932d97cf2
+https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-3-offline-support-and-network-resilience-c84db889162c
+
+SSR (Server Side Rendering):
+https://medium.com/@baphemot/whats-server-side-rendering-and-do-i-need-it-cb42dc059b38
+
+Вместе с Java:
+https://codeburst.io/jsx-react-js-java-server-side-rendering-ssr-2018-cf3aaff7969d
